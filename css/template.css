@@ -21,6 +21,9 @@ header{
 	background-color: lightblue;
 	position: relative;
 	text-align: center;
+}
+
+header h1{
 	line-height: 250px;
 }
 
@@ -34,19 +37,42 @@ header .nav-container{
 	color: lightgray;
 }
 
-.content-container{
-	width: 60%;
-	height: 800px;
-	background-color: rgb(233,233,233);
-	margin: 0 auto;
+
+#local-time{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 60px;
+	width: 20%;
+	padding: 7px;
+	color: white;
+	font-size: 40px;
 }
 
+.content-container{
+	position: relative;
+	width: 60%;
+	height: auto;
+	background-color: rgb(233,233,233);
+	margin: 0 auto 90px;
+	padding: 0 0 10px;
+}
+
+.content-container h3{
+	padding-top: 15px;
+	text-align: center;
+}
+
+.personal-info-form-container,
 .form-container{
 	width: 40%;
-	height: 400px;
-	margin: 0 auto;
+	height: auto;
+	margin: 40px auto 0;
+	padding: 15px;
+	border: 2px solid darkgray;
 }
 
+.personal-info-form-container p,
 .form-container p{
 	padding: 5px 5px 5px 50px;
 }
@@ -54,7 +80,45 @@ header .nav-container{
 .form-container input{
 	display: block;
 	margin: 0 auto 5px;
+	padding: 5px;
+}
 
+.personal-info-form-container input{
+	display: inline;
+	margin: 0 0 5px 64.297px;
+	padding: 5px;
+}
+
+.form-container .error-message{
+	color: red;
+}
+
+.form-container #submit-btn{
+	padding: 5px;
+}
+
+.personal-info-form-container .radio{
+	margin: 0 auto;
+	width: 80px;
+}
+
+.personal-info-form-container #personal-form-submit-btn{
+	display: block;
+	margin: 10px auto 0;
+	padding: 5px;
+}
+
+.required:before{
+	content: "* ";
+	color: red;
+}
+
+.personal-info-form-container .radio input{
+	width: 20px;
+	padding: 0;
+	margin: 0;
+	float: left;
+	margin-top: 2px;
 }
 
 footer{
@@ -64,4 +128,6 @@ footer{
 	height: 90px;
 	width: 100%;
 	background-color: lightblue;
+	text-align: center;
+	line-height: 90px;
 }
