@@ -48,6 +48,78 @@ document.getElementById('submit-btn').onclick = function(){
 
 }
 
+function validatePersonalForm(){
+
+	var firstName = document.forms['personal-info-form']['first-name'];
+	var lastName = document.forms['personal-info-form']['last-name'];
+	var email = document.forms['personal-info-form']['email'];
+	var gender = document.forms['personal-info-form']['gender'];
+	var genderContainer = document.getElementById('radio-container');
+
+	var firstNameBool = false;
+	var lastNameBool = false;
+	var emailBool = false;
+	var radioChecked = false;
+
+	console.log(gender.length);
+
+	console.log('first name bool = ' + firstNameBool)
+
+	if(firstName.value == "" || firstName.value == null){
+		firstName.className += ' validation-error';
+		
+		
+	}else{
+		firstNameBool = true;
+
+		if(firstName.className == ' validation-error'){
+			firstName.className -= ' validation-error';
+		}
+	}
+
+	if(lastName.value == "" || lastName.value == null){
+		lastName.className += ' validation-error';
+		
+	}else{
+		lastNameBool = true;
+	}
+
+	if(email.value == "" || email.value == null){
+		email.className += ' validation-error';
+		
+	}else{
+		emailBool = true;
+	}
+
+	for(var i = 0; i < gender.length; i++){
+		
+		
+		if(gender[i].checked == false){
+			console.log('item not checked')
+			
+		}else{
+			
+
+			console.log('item checked')
+			radioChecked = true;
+		}
+	}
+
+	if(radioChecked == false){			 
+		genderContainer.className += ' validation-error';
+		
+	}
+
+	if(firstNameBool == false || lastNameBool == false || emailBool == false || radioChecked == false){
+		return false;
+	}else{
+		return true;
+	}
+
+	
+	
+}
+
 function displayTime(){
 	var date = new Date();
 	var hour = date.getHours();

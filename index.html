@@ -37,7 +37,7 @@
 					<input type="button" name="Submit" value="Calculate" id="submit-btn">
 				</form>
 				
-				<form class="personal-info-form-container">
+				<form name="personal-info-form" class="personal-info-form-container" onsubmit="return validatePersonalForm()">
 
 					<p><span class="required"></span>First Name: </p>
 					<input type="text" name="first-name">
@@ -52,10 +52,10 @@
 					<input type="email" name="email">
 
 					<p><span class="required"></span>Gender:</p>
-					<div class="radio">
-						<input type="radio" name="gender" value="Male"><label>Male</label><br>
-						<input type="radio" name="gender" value="Female"><label>Female</label><br>
-						<input type="radio" name="gender" value="Other"><label>Other</label>
+					<div id="radio-container" class="radio">
+						<input type="radio" id="gender" name="gender" value="Male"><label>Male</label><br>
+						<input type="radio" id="gender" name="gender" value="Female"><label>Female</label><br>
+						<input type="radio" id="gender" name="gender" value="Other"><label>Other</label>
 					</div>
 
 					<input type="submit" value="Submit" id="personal-form-submit-btn">
